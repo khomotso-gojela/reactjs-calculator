@@ -17,6 +17,14 @@ const calcData= [
     {id:"zero",value:0},
     {id:"decimal",value:'.'}
   ]
+
+  const theme = {dark:'black',light:'white'}
+  const color = ['red','yellow','blue','green','purple','orange']
+
+  const apearance = {
+    theme: ['black','white'],
+    color: ['white','red','yellow','blue','green','purple','orange']
+  }
   
 
-  export { calcData }
+  export { calcData,apearance }
