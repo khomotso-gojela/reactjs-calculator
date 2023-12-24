@@ -93,6 +93,8 @@ body {
 }
 .button:nth-child(15) {
   grid-area: eq;
+  background-color: var(--primary);
+  color: var(--tertiary);
 }
 .button:nth-child(16) {
   grid-area: zero;
