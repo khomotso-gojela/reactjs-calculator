@@ -1,0 +1,99 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: Red;
+  --secondary: rgb(58, 58, 58);
+  --secondary-dark: rgb(27, 27, 27);
+  --tertiary: black;
+}
+
+body {
+  background-color: var(--tertiary);
+}
+
+.calc-wrapper {
+  margin: 0 auto;
+  max-width: 40vw;
+  min-width: 273px;
+  height: 90vh;
+  border: 2px solid var(--primary);
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30% 70%;
+}
+
+/* / SCREEN / */
+.screen {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  margin: 10px;
+  background-color: var(--secondary);
+}
+
+.expression {
+  border-bottom: 1px solid var(--tertiary);
+  border-radius: 2rem 2rem 0 0;
+  height: 50%;
+}
+.expression p {
+  margin-left: 5px;
+}
+
+.answer {
+  text-align: right;
+  border-radius: 0 0 2rem 2rem;
+  height: 50%;
+}
+.answer p {
+  margin-right: 10px;
+}
+
+/* / BUTOONS / */
+.buttons {
+  margin: 10px;
+
+  display: grid;
+  grid-gap: 7px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "clear clear divide mult"
+  "seven eight nine minnus"
+  "four five six plus"
+  "one two three eq"
+  "zero zero dot eq";
+}
+
+.button {
+  height: 100%;
+  text-align: center;
+  color: var(--primary);
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--secondary);
+}
+
+.button:nth-child(1) {
+  grid-area: clear;
+}
+.button:nth-child(15) {
+  grid-area: eq;
+}
+.button:nth-child(16) {
+  grid-area: zero;
+}
